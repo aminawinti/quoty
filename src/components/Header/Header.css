@@ -1,0 +1,18 @@
+nav {
+  width: 100%;
+  height: 8vh;
+  padding: 0 3rem;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 5px rgba(171, 167, 178, 0.3);
+  background-color: #fff;
+}
+#dark nav {
+  background-color: #0e021f;
+  box-shadow: none;
+}
+.logo {
+  width: 8rem;
+}

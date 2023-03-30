@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #213547;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --transition: all 1s ease;
+  --container-width-md: 86%;
+  --container-width-sm: 95%;
+  --color-primary-dark: #34017b;
+  --color-secondary: #1da1f2;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+.container {
+  max-width: 1280px;
+  height: 92vh;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+#light {
+  background: #ebf4f7;
+}
+#dark {
+  background-color: #0e021f;
+}
+.dark-mode__button {
+  padding: 1rem;
+  padding-left: 0.7rem;
+  border-radius: 5rem;
+  background: var(--color-primary-dark);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  height: 2.2rem;
+  width: auto;
+  max-width: 2.2rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.dark-mode__button:hover {
+  max-width: 300px;
+}
+.dark-mode__button:focus,
+.dark-mode__button:active {
+  background: #1b1b1b;
+}
+#dark .dark-mode__button {
+  background: var(--color-primary-dark);
+}
+#dark .dark-mode__button:focus,
+#dark .dark-mode__button:active,
+#dark .dark-mode__button:hover {
+  background: rgba(52, 1, 123, 0.6);
+}
+.dark-mode__button-content {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+.dark-mode__button-label {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+#dark .dark-mode__button-label {
+  color: #fff;
+}
+#dark .sun-icon {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.moon-icon {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: var(--container-width-md);
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: var(--container-width-sm);
+  }
+}
